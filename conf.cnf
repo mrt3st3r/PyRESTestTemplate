@@ -1,8 +1,15 @@
 [API]
+<<<<<<< HEAD
 MYAPIKEY = 9623e4
 BASEURL = https://blah.com
 API = /some-clients/
 PARAM= abc
+=======
+MYAPIKEY = 1234tt
+BASEURL = https://test-api.com
+API = /my-client/
+PARAM= blah
+>>>>>>> 8302916628f39f39c78ce7456e076a59e255fa4f
 
 
 [PROXIES]
