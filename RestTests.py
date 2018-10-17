@@ -5,13 +5,14 @@ import pytest
 import json
 import requests
 import configparser
+import vcr
 
 
 #loading the config file
 config = configparser.ConfigParser()
 config.read('conf.cnf')
 
-# loading the values fomr teh config file
+# loading the values from the config file
 apikey = config.get('API', 'MYAPIKEY')
 validStatusCode = config.get('STATUSCODES', 'VALID')
 baseurl = config.get('API', 'BASEURL')
@@ -29,9 +30,7 @@ httpsproxy = config.get('PROXIES', 'HTTPS')
 proxies = {'http': httpproxy + ":" + port, 'https': httpsproxy + ":" + port}
 
 
-
-# following line can be used if a test needs to be skipped for some reason
-# @pytest.mark.skip(reason='not used for now!')
+@vcr.use_cassette()
 def test_simpleGetAPIcall():
 
     URL_ToTest = 'https://api.ipify.org?format=json'
@@ -47,7 +46,8 @@ def test_simpleGetAPIcall():
     log.info(f'StatusCode from the response: {str(resp.status_code)}')
     log.info(f'API response: {resp.text}')
 
-
+# following line can be used if a test needs to be skipped for some reason
+# @pytest.mark.skip(reason='not used for now!')
 def test_SimplePostAPIcall():
     expectedValue = 'httpbin.org'
     URL_toTest = 'https://httpbin.org/post'
