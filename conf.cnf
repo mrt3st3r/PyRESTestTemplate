@@ -6,11 +6,11 @@ PARAM= ESTAR
 
 
 [PROXIES]
-HTTP = http://proxy2.isis.airnz.co.nz
-HTTPS = https//proxy2.isis.airnz.co.nz
+HTTP = http://xyz.com
+HTTPS = https//xyz.com
 
 [PORT]
-PORT=5865
+PORT=1234
 
 [STATUSCODES]
 VALID=200
