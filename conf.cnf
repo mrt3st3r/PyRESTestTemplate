@@ -1,6 +1,6 @@
 [API]
-MYAPIKEY = 964bacf1
-BASEURL = https://test-communication-clients-api.vpc-f814c29f.airnz.co.nz
+MYAPIKEY = 1234tt
+BASEURL = https://test-api.com
 API = /communication-clients/
 PARAM= ESTAR
 
