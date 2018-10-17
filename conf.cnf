@@ -1,0 +1,17 @@
+[API]
+MYAPIKEY = 964bacf1
+BASEURL = https://test-communication-clients-api.vpc-f814c29f.airnz.co.nz
+API = /communication-clients/
+PARAM= ESTAR
+
+
+[PROXIES]
+HTTP = http://proxy2.isis.airnz.co.nz
+HTTPS = https//proxy2.isis.airnz.co.nz
+
+[PORT]
+PORT=5865
+
+[STATUSCODES]
+VALID=200
+INVALID=400
