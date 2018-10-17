@@ -1,8 +1,8 @@
 [API]
 MYAPIKEY = 1234tt
 BASEURL = https://test-api.com
-API = /communication-clients/
-PARAM= ESTAR
+API = /my-client/
+PARAM= blah
 
 
 [PROXIES]
